@@ -1,0 +1,231 @@
+/* Video Background Styles */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Floating tech icons */
+.floating-tech-icons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.tech-icon {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0;
+  cursor: default;
+  pointer-events: auto;
+}
+
+.tech-tooltip {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tech-icon:hover .tech-tooltip {
+  opacity: 1;
+}
+
+/* Main content */
+.about-page {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.about-section {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* Cards styling */
+.about-card,
+.skills-card,
+.certifications-card,
+.experience-card,
+.education-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Timeline styling */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-badge {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0d6efd;
+  border: 3px solid white;
+}
+
+.timeline-content {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+/* Progress bars */
+.progress {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  border-radius: 10px;
+}
+
+/* Certifications grid */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.certification-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Title underline */
+.title-underline {
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #0d6efd;
+  margin: 10px auto;
+  transform-origin: center;
+}
+
+/* Text colors */
+.text-primary {
+  color: #0d6efd !important;
+}
+
+.text-muted {
+  color: rgba(151, 34, 34, 0.7) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-outline-primary {
+  color: rgb(165, 28, 28);
+  border-color: rgb(117, 25, 25);
+}
+
+.btn-outline-primary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(146, 4, 4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .about-section {
+    text-align: center;
+  }
+
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline-badge {
+    display: none;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* General styles for skill percentage text */
+.skill-item .progress-bar + span {
+  color: #fff; /* White text */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Dark shadow for contrast */
+  font-weight: bold;
+}
+
+/* Optional: Additional styles for progress bar */
+.progress {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+/* General styles for skill percentage text */
+.skill-item .progress-bar + span {
+  color: #fff; /* White text */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Dark shadow for contrast */
+  font-weight: bold;
+}
+
+/* Optional: Additional styles for progress bar */
+.progress {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
